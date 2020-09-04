@@ -6,6 +6,11 @@ export default class IndexViewModel extends ViewBase {
         crsbinding.data.updateUI(this, "routes");
     }
 
+    async disconnectedCallback() {
+        debugger;
+        super.disconnectedCallback();
+    }
+
     async preLoad() {
         await this._getRoutes();
     }

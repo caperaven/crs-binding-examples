@@ -1,0 +1,11 @@
+<h3>Widgets</h3>
+<ul>
+    <template for.once="widget of widgets">
+        <li>
+            <h4>${widget.title}</h4>
+            <svg height="50" width="50" viewBox="0 0 50 50">
+                <use href="${widget.svg}"></use>
+            </svg>
+        </li>
+    </template>
+</ul>

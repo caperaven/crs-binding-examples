@@ -1,4 +1,17 @@
 h2 {
-    text-align: left;
+    text-align: center;
     color: var(--cl-primary);
+    background: var(--cl-border);
+    padding: 1rem;
+}
+
+widgets-component {
+    display: block;
+    border-right: solid 1px var(--cl-border);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    height: calc(100% - 7rem);
 }
