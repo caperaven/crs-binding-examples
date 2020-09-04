@@ -23,6 +23,12 @@
       "view": "404",
       "html-only": true,
       "hasStyle": true
+    },
+    {
+      "title": "Widgets Component",
+      "hash": "#widgets-component",
+      "view": "widgets-component",
+      "hasStyle": true
     }
   ]
 }
