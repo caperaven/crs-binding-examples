@@ -32,6 +32,10 @@
             align-items: center;
             justify-content: center;
         }
+
+        [hidden] {
+            display: none;
+        }
     </style>
 </head>
 <body style="visibility: hidden">
@@ -65,7 +69,7 @@
             </nav>
         </aside>
         <crs-router routes="app/routes.json"></crs-router>
-        <source-links></source-links>
+        <source-links hidden.if="$globals.source == null"></source-links>
     </main>
 
     <footer>
