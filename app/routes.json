@@ -29,6 +29,11 @@
       "hash": "#widgets-component",
       "view": "widgets-component",
       "hasStyle": true
+    },
+    {
+      "title": "Listen To Property",
+      "hash": "#listen-on",
+      "view": "listen-on"
     }
   ]
 }

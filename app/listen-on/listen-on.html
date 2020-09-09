@@ -1,0 +1,12 @@
+<h2>${title}</h2>
+<label>
+    <div>Please change the value - ${model.value}</div>
+    <input value.bind="model.value" />
+</label>
+
+<h3>Change Log</h3>
+<ul>
+    <template for="item of model.log">
+        <li>${item.message}</li>
+    </template>
+</ul>
