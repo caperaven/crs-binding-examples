@@ -58,7 +58,7 @@
         <aside classlist.if="$globals.isMenuOpen ==  true? 'open'" click.setValue="$globals.isMenuOpen = !$globals.isMenuOpen">
             <nav>
                 <ol>
-                    <template for="route of routes">
+                    <template for="route of routes" data-reference="menu-item">
                         <li><a href.one-way="route.hash">${route.title}</a></li>
                     </template>
                 </ol>
