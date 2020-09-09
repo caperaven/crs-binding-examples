@@ -65,6 +65,7 @@
             </nav>
         </aside>
         <crs-router routes="app/routes.json"></crs-router>
+        <source-links></source-links>
     </main>
 
     <footer>
@@ -74,6 +75,7 @@
     <script type="module">
         import "./node_modules/crs-binding/crs-binding.js";
         import "./node_modules/crs-router/crs-router.js";
+        import "./components/source-links/source-links.js";
         import IndexViewModel from "./index.js";
         document.viewModel = new IndexViewModel(document.body);
 
