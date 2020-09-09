@@ -12,8 +12,8 @@
 </label>
 
 <label>
-    <div>Age:</div>
-    <input value.bind="person.age" type="number"/>
+    <div>Age: ${person.age}</div>
+    <input type="range" min="1" max="100" value.bind="person.age">
 </label>
 
 <h3>Summary</h3>

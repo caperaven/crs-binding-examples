@@ -27,7 +27,8 @@
     {
       "title": "Input Form",
       "hash": "#input-form",
-      "view": "input-form"
+      "view": "input-form",
+      "hasStyle": true
     },
     {
       "title": "Widgets Component",
