@@ -11,6 +11,12 @@
         border-radius: 5px;
     }
 
+    source-links ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
     source-links h3 {
         margin: 0 0 0.7rem 0;
         color: #e91e63;
@@ -18,5 +24,10 @@
 </style>
 
 <h3>Source Links</h3>
-<a href="${$globals.source.html}" target="_blank">HTML Source</a> <br/>
-<a href="${$globals.source.js}" target="_blank">Javascript Source</a>
+<nav>
+    <ul>
+        <template for="item of $globals.source">
+            <li><a href="${item.url}" target="_blank">${item.title}</a></li>
+        </template>
+    </ul>
+</nav>

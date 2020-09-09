@@ -1,4 +1,10 @@
-export default class ListenOn extends crsbinding.classes.ViewBase {
+import {ExamplesViewBase} from "../viewBase.js";
+
+export default class ListenOn extends ExamplesViewBase {
+    get sourceUrl() {
+        return import.meta.url.replace(".js", ".source.js");
+    }
+
     async disconnectedCallback() {
         await super.disconnectedCallback();
         this.valueChangedHandler = null;
