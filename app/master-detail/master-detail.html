@@ -9,23 +9,33 @@
             </template>
         </ul>
     </aside>
-    <section>
-        <h3>Personal Details</h3>
-        <label>
-            <div>First Name</div>
-            <input value.bind="selectedPerson.firstName" />
-        </label>
-        <label>
-            <div>Last Name</div>
-            <input value.bind="selectedPerson.lastName" />
-        </label>
-        <label>
-            <div>Age</div>
-            <input value.bind="selectedPerson.age" />
-        </label>
-    </section>
-    <section>
-        <h3>Contact Details</h3>
+    <div class="left-margin">
+        <section>
+            <h3>Personal Details</h3>
+            <label>
+                <div>First Name</div>
+                <input value.bind="selectedPerson.firstName" />
+            </label>
+            <label>
+                <div>Last Name</div>
+                <input value.bind="selectedPerson.lastName" />
+            </label>
+            <label>
+                <div>Age</div>
+                <input value.bind="selectedPerson.age" />
+            </label>
+        </section>
+        <section>
+            <h3>Contact Details</h3>
 
-    </section>
+            <div hidden.if="selectedPerson.contacts && selectedPerson.contacts.length > 0">No contact numbers available</div>
+
+            <template for="contact of selectedPerson.contacts">
+                <label>
+                    <div>${contact.type}</div>
+                    <input value.bind="contact.number"/>
+                </label>
+            </template>
+        </section>
+    </div>
 </div>
