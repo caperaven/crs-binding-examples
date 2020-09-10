@@ -14,11 +14,15 @@ class PersonComponent extends crsbinding.classes.BindableElement {
     }
 
     accept() {
-        const isValid = this.querySelector("form").checkValidity();
+        const form = this.querySelector("form");
+        const isValid = form.checkValidity();
 
         if (isValid) {
             this.callback(this.getProperty("person"));
             this.close();
+        }
+        else {
+            form.reportValidity();
         }
     }
 
