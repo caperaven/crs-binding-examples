@@ -12,8 +12,10 @@
 </label>
 
 <label>
-    <div>Age: ${person.age}</div>
+    <div style.color.if="person.age > 60 ? '#ff0080'">Age: ${person.age}</div>
     <input type="range" min="1" max="100" value.bind="person.age">
+    <span    hidden.if="person.age > 60">This person is of the right age</span>
+    <span hidden.if="person.age <= 60" style="color: #ff0080">This person is too old and does not qualify</span>
 </label>
 
 <h3>Summary</h3>

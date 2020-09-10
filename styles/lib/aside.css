@@ -1,4 +1,4 @@
-aside {
+aside.menu {
     background: var(--cl-primary);
     color: var(--cl-primary-alt);
     box-shadow: 5px 0px 5px 0px var(--cl-primary-shadow);
@@ -14,11 +14,11 @@ aside {
     z-index: 1;
 }
 
-aside.open {
+aside.menu.open {
     transform: translateX(0);
 }
 
-aside.open:before {
+aside.menu.open:before {
     content: "";
     position: absolute;
     background: transparent;
@@ -29,7 +29,7 @@ aside.open:before {
     z-index: -2;
 }
 
-aside.open:after {
+aside.menu.open:after {
     background: var(--cl-primary);
 
     content: "";
@@ -41,15 +41,15 @@ aside.open:after {
     z-index: -1;
 }
 
-aside nav li {
+aside.menu nav li {
     cursor: pointer;
 }
 
-aside nav li:hover {
+aside.menu nav li:hover {
     background: #00adff;
 }
 
-aside nav a, aside nav a:visited {
+aside.menu nav a, aside nav a:visited {
     padding: 0.5rem;
     color: var(--cl-primary-alt);
     text-decoration: none;

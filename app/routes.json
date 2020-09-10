@@ -31,6 +31,12 @@
       "hasStyle": true
     },
     {
+      "title": "Master Detail View",
+      "hash": "#master-detail",
+      "view": "master-detail",
+      "hasStyle": true
+    },
+    {
       "title": "Widgets Component",
       "hash": "#widgets-component",
       "view": "widgets-component",

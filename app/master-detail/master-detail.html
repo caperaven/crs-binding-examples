@@ -1,0 +1,31 @@
+<h2>${title}</h2>
+
+<div class="container">
+    <aside>
+        <h3>People</h3>
+        <ul click.setValue="selectedPerson = $data($event.target.dataset.uid)">
+            <template for="person of people">
+                <li data-id="${person.id}">${person.firstName} ${person.lastName}</li>
+            </template>
+        </ul>
+    </aside>
+    <section>
+        <h3>Personal Details</h3>
+        <label>
+            <div>First Name</div>
+            <input value.bind="selectedPerson.firstName" />
+        </label>
+        <label>
+            <div>Last Name</div>
+            <input value.bind="selectedPerson.lastName" />
+        </label>
+        <label>
+            <div>Age</div>
+            <input value.bind="selectedPerson.age" />
+        </label>
+    </section>
+    <section>
+        <h3>Contact Details</h3>
+
+    </section>
+</div>

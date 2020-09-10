@@ -1,0 +1,29 @@
+.container {
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    width: 100%;
+    height: calc(100% - 5rem);
+}
+
+.container ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-right: solid 1px var(--cl-border);
+}
+
+.container ul li {
+    padding: 0.25rem;
+    cursor: pointer;
+    color: var(--cl-focus);
+}
+
+.container aside {
+    display: grid;
+    grid-auto-rows: 3.5rem 1fr;
+}
+
+.container ul li:hover {
+    color: white;
+    background: var(--cl-focus);
+}
