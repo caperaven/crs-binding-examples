@@ -13,11 +13,11 @@ class MarkdownComponent extends crsbinding.classes.BindableElement {
         fetch(url)
             .then(result => result.text())
             .then(html => this.setProperty("document", marked(html)))
-            .catch(error => console.error(error));
     }
 
     close() {
         this.setProperty("document", null);
+        this.querySelector("article").scrollTop = 0;
     }
 }
 

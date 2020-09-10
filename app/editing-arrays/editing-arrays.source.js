@@ -18,5 +18,9 @@ export const source = [
     {
         "title": "Data JS",
         "url": "https://github.com/caperaven/crs-binding-examples/blob/master/app/editing-arrays/data.js",
+    },
+    {
+        "title": "Working with arrays",
+        "url": "https://github.com/caperaven/crs-binding-documentation/blob/master/8.arrays.md"
     }
 ]

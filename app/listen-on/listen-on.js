@@ -17,8 +17,7 @@ export default class ListenOn extends ExamplesViewBase {
         super.load();
     }
 
-    valueChanged() {
-        const value = crsbinding.data.getProperty(this, "model.value");
+    valueChanged(property, value) {
         const array = crsbinding.data.getProperty(this, "model.log");
         array.push({message: `new value = ${value}`});
     }

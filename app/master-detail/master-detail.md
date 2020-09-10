@@ -33,9 +33,7 @@ We can use that to get the data for the element we clicked on.
 
 If you had to describe the above expression in english it could read like this:
 
-`
 When you click on the UL, set the property selectedPerson to the object in the binding store that has the id as defined by the target's data-uid attribute value.
-` 
 
 ## Timing problem on setting the default selected item
 We want set the default selectedPerson to the first item in the people collection.
