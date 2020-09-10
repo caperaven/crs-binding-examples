@@ -1,1 +1,22 @@
 <h2>${title}</h2>
+
+<div class="container">
+    <div class="toolbar">
+        <button click.call="addPerson">Add</button>
+        <button click.call="editPerson">Edit</button>
+        <button click.call="deletePerson">Delete</button>
+    </div>
+
+    <ul>
+        <template for="person of people">
+            <li>
+                <label>
+                    <input type="checkbox" value.bind="person.isSelected" />
+                    <span>${person.firstName} ${person.lastName}</span>
+                </label>
+            </li>
+        </template>
+    </ul>
+
+    <person-component hidden.if="$self.isVisible != true"></person-component>
+</div>

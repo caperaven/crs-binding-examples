@@ -1,0 +1,58 @@
+.container {
+    display: grid;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.container ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.container ul li label {
+    cursor: pointer;
+}
+
+person-component {
+    display: block;
+    padding: 1rem;
+    background: white;
+    border-radius: 5px;
+    border: solid 1px var(--cl-border);
+    box-shadow: 0 0 6px 0px #dfdfdf;
+
+    position: fixed;
+    width: 20rem;
+    height: 12rem;
+    left: calc(50% - 10rem);
+    display: grid;
+}
+
+person-component form {
+    display: grid;
+}
+
+person-component input {
+    width: calc(100% - 1rem);
+}
+
+person-component input:invalid {
+    outline: none;
+    border: solid 2px var(--cl-error);
+    background: var(--cl-error-transparnet);
+}
+
+person-component .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
+}
+
+person-component button {
+    margin-left: 0.5rem;
+}
