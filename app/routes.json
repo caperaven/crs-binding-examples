@@ -37,6 +37,12 @@
       "hasStyle": true
     },
     {
+      "title": "Editing Arrays",
+      "hash": "#editing-arrays",
+      "view": "editing-arrays",
+      "hasStyle": true
+    },
+    {
       "title": "Widgets Component",
       "hash": "#widgets-component",
       "view": "widgets-component",

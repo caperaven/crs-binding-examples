@@ -1,10 +1,10 @@
 export const source = [
     {
-        "title": "InputForm HTML",
+        "title": "Welcome HTML",
         "url": "https://github.com/caperaven/crs-binding-examples/blob/master/app/welcome/welcome.html",
     },
     {
-        "title": "InputForm JS",
+        "title": "Welcome JS",
         "url": "https://github.com/caperaven/crs-binding-examples/blob/master/app/welcome/welcome.html",
     }
 ]
