@@ -13,4 +13,8 @@ export default class ListenOn extends ExamplesViewBase {
 
         super.load();
     }
+
+    peopleRendered() {
+        this.setProperty("selectedPerson", this.getProperty("people")[0]);
+    }
 }

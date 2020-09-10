@@ -3,9 +3,9 @@
 <div class="container">
     <aside>
         <h3>People</h3>
-        <ul click.setValue="selectedPerson = $data($event.target.dataset.uid)">
+        <ul click.setValue="selectedPerson = $data($event.target.dataset.uid)" rendered.call="peopleRendered">
             <template for="person of people">
-                <li data-id="${person.id}">${person.firstName} ${person.lastName}</li>
+                <li data-id="${person.id}" aria-selected.if="$parent.selectedPerson.id == person.id">${person.firstName} ${person.lastName}</li>
             </template>
         </ul>
     </aside>
