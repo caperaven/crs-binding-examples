@@ -1,0 +1,61 @@
+<style>
+    markdown-component {
+        z-index: 999999999;
+        --position-offset: 5rem;
+
+        position: fixed;
+        left: var(--position-offset);
+        right: var(--position-offset);
+        bottom: var(--position-offset);
+        top: var(--position-offset);
+        background: white;
+        border-radius: 5px;
+        border: solid 2px var(--cl-border);
+
+        display: grid;
+        grid-template-rows: 3rem 1fr 3rem;
+        background: white;
+    }
+
+    markdown-component:before {
+        z-index: -1;
+        content: "";
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        background: #444444cc;
+    }
+
+    markdown-component > h2 {
+        padding: 0;
+        margin: 0;
+        background: var(--cl-focus);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    markdown-component > article {
+        overflow: auto;
+        background: white;
+        padding: 1rem;
+    }
+
+    markdown-component > [role="toolbar"] {
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 1rem;
+        background: white;
+    }
+</style>
+
+<h2>Documentation</h2>
+<article inner-html.bind="document"></article>
+<div role="toolbar">
+    <button click.call="close">Close</button>
+</div>
