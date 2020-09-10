@@ -9,7 +9,8 @@ export default class ListenOn extends ExamplesViewBase {
     load() {
         const people = [...data];
         this.setProperty("people", people);
-        this.setProperty("selectedPerson", people[0]);
+        crsbinding.data.makeShared(this, "selectedPerson", ["firstName", "lastName"]);
+
         super.load();
     }
 }

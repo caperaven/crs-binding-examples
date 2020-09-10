@@ -2,7 +2,7 @@ export const data = [
     {
         id: 0,
         firstName: "John",
-        lastName: "Doe",
+        lastName: "Smith",
         age: 32,
         contacts: [
             {
@@ -22,7 +22,7 @@ export const data = [
     {
         id: 1,
         firstName: "Jane",
-        lastName: "Doe",
+        lastName: "Smith",
         age: 30,
         contacts: [
             {
@@ -38,13 +38,13 @@ export const data = [
     {
         id: 2,
         firstName: "Little",
-        lastName: "Doe",
+        lastName: "Smith",
         age: 10
     },
     {
         id: 3,
         firstName: "Baby",
-        lastName: "Doe",
+        lastName: "Smith",
         age: 2
     }
 ]
