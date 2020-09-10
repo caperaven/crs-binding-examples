@@ -1,3 +1,21 @@
+.system-max {
+    display: block;
+    width: 19rem;
+    background: var(--cl-focus);
+    color: white;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+
+.system-max input {
+    width: calc(100% - 0.5rem);
+}
+
+.system-max .value-text {
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
 .chart {
     display: flex;
     flex-direction: column;
