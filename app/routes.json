@@ -52,6 +52,12 @@
       "title": "Listen To Property",
       "hash": "#listen-on",
       "view": "listen-on"
+    },
+    {
+      "title": "Basic Chart",
+      "hash": "#basic-chart",
+      "view": "basic-chart",
+      "hasStyle": true
     }
   ]
 }

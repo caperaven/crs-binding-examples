@@ -1,0 +1,8 @@
+<h2>${title}</h2>
+
+<div class="chart">
+    <template for="item of items">
+        <progress max="${$parent.maxValue}" value.bind="item.value" data-title="${item.title}" data-value="${item.value}"></progress>
+        <input type="range" max="${$parent.maxValue}" value.bind="item.value"/>
+    </template>
+</div>

@@ -1,0 +1,43 @@
+.chart {
+    display: flex;
+    flex-direction: column;
+}
+
+.chart progress {
+    position: relative;
+    width: 20rem;
+    height: 2rem;
+    appearance: none;
+    margin-bottom: 0.25rem;
+}
+
+.chart input[type="range"] {
+    width: 20rem;
+}
+
+.chart progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.chart progress[value]::-webkit-progress-value {
+    background-color: #00adff55;
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    transition: all 0.1s ease-out;
+}
+
+.chart progress:before {
+    content: attr(data-title);
+    position: absolute;
+    left: 0.25rem;
+    top: 0.35rem;
+}
+
+.chart progress:after {
+    content: attr(data-value);
+    position: absolute;
+    right: 0.25rem;
+    top: 0.35rem;
+}
