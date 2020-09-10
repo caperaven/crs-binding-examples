@@ -1,6 +1,6 @@
 {
     "name": "",
-    "version": "0.0.7",
+    "version": "0.0.30",
     "description": "",
     "main": "index.js",
     "directories": {
@@ -9,7 +9,7 @@
     "scripts": {
         "test": "jest",
         "bundle": "rollup -c",
-        "build-publish": "rollup -c & node build/publish.js"
+        "build-publish": "node build/publish.js"
     },
     "keywords": [],
     "author": "",
@@ -21,14 +21,16 @@
         "@babel/preset-env": "^7.6.0",
         "@types/jest": "^24.0.18",
         "babel-jest": "^24.9.0",
+        "clean-css": "^4.2.3",
         "glob": "^7.1.4",
         "jest": "^24.9.0",
         "mkdirp": "^0.5.1",
         "rollup": "^1.23.0",
-        "rollup-plugin-terser": "^5.1.2"
+        "rollup-plugin-terser": "^5.1.2",
+        "terser": "^5.3.1"
     },
     "dependencies": {
-        "crs-binding": "0.0.151",
+        "crs-binding": "0.0.178",
         "crs-router": "0.0.48"
     }
 }
