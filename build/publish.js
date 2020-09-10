@@ -14,6 +14,7 @@ class Publish {
         await instance.copyFiles("./dist/*.*");
         await instance.copyFiles("./readme.md");
         await instance.copyFiles("./index.html");
+        await instance.copyFiles("./favicon.ico");
         await instance.copySource("app");
         await instance.copySource("components");
         await instance.bumpVersion();
@@ -102,14 +103,14 @@ class Publish {
             if (ext == ".js") {
                 const code = fs.readFileSync(file, "utf8").toString();
 
-                const settings = {
-                    "mangle": {
-                        "properties": true
-                    }
-                }
+                // const settings = {
+                //     "mangle": {
+                //         "properties": true
+                //     }
+                // }
 
-                const result = await terser.minify(code, settings);
-                fs.writeFileSync(`${target}${fileName}`, result.code,"utf8");
+                //const result = await terser.minify(code, settings);
+                fs.writeFileSync(`${target}${fileName}`, code,"utf8");
             }
             else {
                 fs.copyFileSync(file, `${target}${fileName}`);

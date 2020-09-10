@@ -1,6 +1,6 @@
 {
     "name": "",
-    "version": "0.0.30",
+    "version": "0.0.35",
     "description": "",
     "main": "index.js",
     "directories": {
@@ -30,7 +30,7 @@
         "terser": "^5.3.1"
     },
     "dependencies": {
-        "crs-binding": "0.0.178",
+        "crs-binding": "0.0.181",
         "crs-router": "0.0.48"
     }
 }
