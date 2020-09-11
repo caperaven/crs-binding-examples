@@ -10,9 +10,9 @@ class Publish {
         await instance.copyNodeModules("crs-binding");
         await instance.copyNodeModules("crs-router");
         await instance.cleanCSS("./styles/**/*.css");
-        await instance.copyFiles("./dist/*.*");
         await instance.copyFiles("./readme.md");
         await instance.copyFiles("./index.html");
+        await instance.copyFiles("./index.js");
         await instance.copyFiles("./favicon.ico");
         await instance.copySource("app");
         await instance.copySource("components");
@@ -22,7 +22,7 @@ class Publish {
     
     constructor() {
         mkdirp.sync(path.resolve("./publish"));
-        this.commands = [];
+        this.commands = ['terser index.js -c -m -o index.js'];
     }
 
     async copyFiles(query, folder) {
@@ -107,7 +107,7 @@ class Publish {
                 this.commands.push(`terser ${toFile} -c -m -o ${toFile}`);
             }
 
-            fs.copyFileSync(file, toFile);
+            fs.copyFileSync(file, `${target}${fileName}`);
         }
     }
 
