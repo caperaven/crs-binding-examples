@@ -8,6 +8,10 @@ export const source = [
         "url": "https://github.com/caperaven/crs-binding-examples/blob/master/app/basic-chart/basic-chart.js",
     },
     {
+        "title": "Basic Chart Data",
+        "url": "https://github.com/caperaven/crs-binding-examples/blob/master/app/basic-chart/data.js",
+    },
+    {
         "title": "Basic Chart CSS",
         "url": "https://github.com/caperaven/crs-binding-examples/blob/master/styles/views/basic-chart.css"
     }

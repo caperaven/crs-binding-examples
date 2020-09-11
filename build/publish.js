@@ -3,7 +3,6 @@ const mkdirp = require("mkdirp");
 const glob = require("glob");
 const path = require("path");
 const CleanCSS = require('clean-css');
-const terser = require('terser');
 
 class Publish {
     static async distribute() {
@@ -18,10 +17,12 @@ class Publish {
         await instance.copySource("app");
         await instance.copySource("components");
         await instance.bumpVersion();
+        await instance.saveCommands();
     }
     
     constructor() {
         mkdirp.sync(path.resolve("./publish"));
+        this.commands = [];
     }
 
     async copyFiles(query, folder) {
@@ -100,21 +101,13 @@ class Publish {
             const ext = path.extname(file);
             this.initFolder(target);
 
+            const toFile = `${target}${fileName}`.replace("publish/", "");
+
             if (ext == ".js") {
-                const code = fs.readFileSync(file, "utf8").toString();
-
-                // const settings = {
-                //     "mangle": {
-                //         "properties": true
-                //     }
-                // }
-
-                //const result = await terser.minify(code, settings);
-                fs.writeFileSync(`${target}${fileName}`, code,"utf8");
+                this.commands.push(`terser ${toFile} -c -m -o ${toFile}`);
             }
-            else {
-                fs.copyFileSync(file, `${target}${fileName}`);
-            }
+
+            fs.copyFileSync(file, toFile);
         }
     }
 
@@ -127,6 +120,12 @@ class Publish {
             this.initFolder(target);
             fs.copyFileSync(file, `${target}${fileName}`);
         }
+    }
+
+    async saveCommands() {
+        const string = this.commands.join("\n");
+        const target = `./publish/minify.sh`;
+        fs.writeFileSync(target, string, "utf8");
     }
 }
 
