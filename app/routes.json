@@ -58,6 +58,12 @@
       "hash": "#basic-chart",
       "view": "basic-chart",
       "hasStyle": true
+    },
+    {
+      "title": "Canvas",
+      "hash": "#canvas",
+      "view": "canvas",
+      "hasStyle": true
     }
   ]
 }

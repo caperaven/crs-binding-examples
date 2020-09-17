@@ -1,0 +1,12 @@
+<h2>${title}</h2>
+
+<canvas
+    width="800"
+    height="600"
+    mousemove.setValue="mousePos={x: $event.clientX, y: $event.clientY}"
+    mousemove.call="draw"
+    mousedown.setValue="[startPos={x: $event.clientX, y: $event.clientY}; mouseState.isDown = true]"
+    mouseup.setValue="mouseState.isDown = false">
+</canvas>
+
+<div>x: ${mousePos.x} - y: ${mousePos.y} - isMouseDown: ${mouseState.isDown}</div>
