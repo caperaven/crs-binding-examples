@@ -4,6 +4,18 @@
 <div class="container">
     <svg-component></svg-component>
     <div class="padded">
-        ... some other content goes here.
+        <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+            <rect x="${position}" y="${position}" width="${size}" height="${size}" fill="#ffbb00"></rect>
+        </svg>
     </div>
 </div>
+
+<label id="position">
+    <div>Position: ${position}</div>
+    <input type="range" value.bind="position" max="400"/>
+</label>
+
+<label id="size">
+    <div>Size: ${size}</div>
+    <input type="range" value.bind="size" max="200"/>
+</label>
