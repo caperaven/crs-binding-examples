@@ -28,7 +28,7 @@ click.setValue="[position.x = $event.clientX - $data($context, 'offset').left; p
 
 There are two set value expressions here seperated by a ";"  
 1. position.x = $event.clientX - $data($context, 'offset').left
-1. position.y = $event.clientY - $data($context, 'offset').left
+1. position.y = $event.clientY - $data($context, 'offset').top
 
 As you can see the first sets the x value of position, and the second the y value.  
 We get the click x and y position from the event's clientX and clientY values.  
