@@ -1,6 +1,6 @@
 import {widgets} from "./widgets.js";
 
-class WidgetsComponent extends crsbinding.classes.BindableElement {
+class SvgComponent extends crsbinding.classes.BindableElement {
     get html() {
         return import.meta.url.replace(".js", ".html");
     }
@@ -10,4 +10,4 @@ class WidgetsComponent extends crsbinding.classes.BindableElement {
     }
 }
 
-customElements.define("widgets-component", WidgetsComponent);
+customElements.define("svg-component", SvgComponent);

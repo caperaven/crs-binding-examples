@@ -1,7 +1,7 @@
 import {ExamplesViewBase} from "../viewBase.js";
-import "../../components/widgets-component/widgets-component.js";
+import "../../components/svg-component/svg-component.js";
 
-export default class WidgetsComponentView extends ExamplesViewBase {
+export default class SvgView extends ExamplesViewBase {
     get sourceUrl() {
         return import.meta.url.replace(".js", ".source.js");
     }

@@ -43,9 +43,9 @@
       "hasStyle": true
     },
     {
-      "title": "Widgets Component",
-      "hash": "#widgets-component",
-      "view": "widgets-component",
+      "title": "Svg",
+      "hash": "#svg",
+      "view": "svg",
       "hasStyle": true
     },
     {
