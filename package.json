@@ -1,6 +1,6 @@
 {
     "name": "",
-    "version": "0.0.55",
+    "version": "0.0.56",
     "description": "",
     "main": "index.js",
     "directories": {
@@ -29,7 +29,7 @@
         "rollup-plugin-terser": "^5.1.2"
     },
     "dependencies": {
-        "crs-binding": "0.0.186",
+        "crs-binding": "0.0.189",
         "crs-router": "0.0.48"
     }
 }
