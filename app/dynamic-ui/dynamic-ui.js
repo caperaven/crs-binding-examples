@@ -23,4 +23,8 @@ export default class DynamicUi extends ExamplesViewBase {
             html: htmlStr
         })
     }
+
+    clear() {
+        crsbinding.events.emitter.postMessage("#preview", {context: null, html: ""});
+    }
 }
