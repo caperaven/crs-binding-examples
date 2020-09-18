@@ -64,6 +64,12 @@
       "hash": "#canvas",
       "view": "canvas",
       "hasStyle": true
+    },
+    {
+      "title": "Dynamic UI - crs-widget",
+      "hash": "#dynamic-ui",
+      "view": "dynamic-ui",
+      "hasStyle": true
     }
   ]
 }

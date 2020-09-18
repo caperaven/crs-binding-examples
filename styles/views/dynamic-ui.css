@@ -1,0 +1,40 @@
+crs-router {
+    display: grid;
+    grid-template-rows: 3rem 1fr;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+}
+
+.toolbar h2 {
+    font-size: 1rem;
+    margin-right: 1rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+}
+
+.container-left {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.container-right {
+    margin-left: 2rem;
+}
+
+crs-widget, textarea {
+    display: block;
+    width: 100%;
+    height: calc(100% - 2rem)   ;
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
+    line-height: 2rem;
+}
