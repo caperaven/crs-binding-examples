@@ -7,7 +7,14 @@ export default class SvgView extends ExamplesViewBase {
     }
 
     preLoad() {
-        this.setProperty("position", 50);
+        this.setProperty("position.x", 100);
+        this.setProperty("position.y", 100);
         this.setProperty("size", 50);
+    }
+
+    load() {
+        const rect = this._element.querySelector(".container svg").getBoundingClientRect();
+        this.setProperty("offset", rect);
+        super.load();
     }
 }

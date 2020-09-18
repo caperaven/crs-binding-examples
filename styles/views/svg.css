@@ -12,22 +12,32 @@ widgets-component {
 
 .container {
     display: grid;
-    grid-template-columns: 20rem 1fr;
+    grid-template-columns: 10rem 1fr;
     height: calc(100% - 7rem);
+}
+
+.container svg {
+    background: #efefef;
 }
 
 .container svg rect {
     transition: all 0.5s ease-out;
 }
 
-#position {
+#positionX {
     position: absolute;
     left: 250px;
-    top: 120px;
+    top: 150px;
+}
+
+#positionY {
+    position: absolute;
+    left: 450px;
+    top: 150px;
 }
 
 #size {
     position: absolute;
-    left: 450px;
-    top: 120px;
+    left: 650px;
+    top: 150px;
 }

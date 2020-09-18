@@ -4,15 +4,20 @@
 <div class="container">
     <svg-component></svg-component>
     <div class="padded">
-        <svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
-            <rect x="${position}" y="${position}" width="${size}" height="${size}" fill="#ffbb00"></rect>
+        <svg height="100%" width="100%" click.setValue="[position.x = $event.clientX - $data($context, 'offset').left; position.y = $event.clientY - $data($context, 'offset').left]">
+            <rect x.attr="${position.x}" y.attr="${position.y}" width.attr="${size}" height.attr="${size}" fill="#ffbb00"></rect>
         </svg>
     </div>
 </div>
 
-<label id="position">
-    <div>Position: ${position}</div>
-    <input type="range" value.bind="position" max="400"/>
+<label id="positionX">
+    <div>Position X: ${position}</div>
+    <input type="range" value.bind="position.x" max="${offset.width}"/>
+</label>
+
+<label id="positionY">
+    <div>Position X: ${position}</div>
+    <input type="range" value.bind="position.y" max="${offset.height}"/>
 </label>
 
 <label id="size">
