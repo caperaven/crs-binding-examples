@@ -1,6 +1,6 @@
 {
     "name": "",
-    "version": "0.0.56",
+    "version": "0.0.60",
     "description": "",
     "main": "index.js",
     "directories": {
@@ -23,6 +23,7 @@
         "babel-jest": "^24.9.0",
         "clean-css": "^4.2.3",
         "glob": "^7.1.4",
+        "html-minifier": "^4.0.0",
         "jest": "^24.9.0",
         "mkdirp": "^0.5.1",
         "rollup": "^1.23.0",
@@ -30,6 +31,6 @@
     },
     "dependencies": {
         "crs-binding": "0.0.189",
-        "crs-router": "0.0.48"
+        "crs-router": "0.0.70"
     }
 }

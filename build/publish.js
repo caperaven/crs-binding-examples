@@ -3,6 +3,7 @@ const mkdirp = require("mkdirp");
 const glob = require("glob");
 const path = require("path");
 const CleanCSS = require('clean-css');
+const htmlMinifi = require("html-minifier").minify;
 
 class Publish {
     static async distribute() {
@@ -112,7 +113,18 @@ class Publish {
                 this.commands.push(`terser ${toFile} -c -m -o ${toFile}`);
             }
 
-            fs.copyFileSync(file, `${target}${fileName}`);
+            if (ext == ".html") {
+                let html = fs.readFileSync(file, "utf8");
+                html = htmlMinifi(html, {
+                    minifyCSS: true,
+                    collapseWhitespace: true
+                });
+                fs.writeFileSync(`${target}${fileName}`, html, "utf8");
+            }
+            else {
+                fs.copyFileSync(file, `${target}${fileName}`);
+            }
+
         }
     }
 
