@@ -24,6 +24,8 @@ There are two logic parts presented on this button.
 1. When you click this button set the tab property to the tab we want to show. In this case 'tab1'.
 1. If the tab property is equal to this button's tab, add the class 'selected' to the classlist.
 
+If you want to implement this properly including web accessibility you should use aria-selected instead of the classlist binding.
+
 ### Tab
 
 ```html
@@ -36,5 +38,5 @@ This is actually rather simple.
 This div is hidden if the tab property is not equal to the required value.  
 In this case the div requires the tab value to be 'tab1';
 
-That is it, simple right :)
+That is it, simple right :)  
 See the source links for a complete picture.
