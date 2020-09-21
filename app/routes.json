@@ -70,6 +70,12 @@
       "hash": "#dynamic-ui",
       "view": "dynamic-ui",
       "hasStyle": true
+    },
+    {
+      "title": "Simple tabsheet",
+      "hash": "#tabsheet",
+      "view": "tabsheet",
+      "hasStyle": true
     }
   ]
 }

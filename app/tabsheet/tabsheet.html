@@ -1,0 +1,19 @@
+<h2>${title}</h2>
+
+<div role="tablist">
+    <button click.setValue="tab = 'tab1'" classlist.if="tab == 'tab1' ? 'selected'">Tab 1</button>
+    <button click.setValue="tab = 'tab2'" classlist.if="tab == 'tab2' ? 'selected'">Tab 2</button>
+    <button click.setValue="tab = 'tab3'" classlist.if="tab == 'tab3' ? 'selected'">Tab 3</button>
+</div>
+
+<div role="tabpanel">
+    <div hidden.if="tab != 'tab1'">
+        <h3>Tab 1</h3>
+    </div>
+    <div hidden.if="tab != 'tab2'">
+        <h3>Tab 2</h3>
+    </div>
+    <div hidden.if="tab != 'tab3'">
+        <h3>Tab 3</h3>
+    </div>
+</div>
