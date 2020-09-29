@@ -17,34 +17,38 @@ Sharing the same context makes this much easier.
 
 1. view model - shared-context - context
 1. component-one - bindable element with no context
-1. component-two - bindable element with no context
+1. component-two - custom element with no context
 
-## Dealing with timing
+## Prevent own context being created
 
-The context needs to load it's components at the very last possible moment.
+Since we want to share the context we don't want out components to register it's own.  
+This is only required if you use bindable element since that one of the construction tasks of bindable element.
+
+To prevent the context from being created you need to override the `hasOwnContext` property and return false.
 
 ```js
-async connectedCallback() {
-    await super.connectedCallback();
-
-    // at this point the context id has been assigned
-    await import("./component-one.js");
-    await import("./component-two.js");
+get hasOwnContext() {
+    return false;
 }
 ```
 
-We will use the binding engine to pass the binding context on using an attribute binding.
+As mentioned before, if you are using a standard HTMLElement you don't need to do this.  
+See the component source files for more details.
+
+## Pass on context id from parent to children
+
+For this we are going to set the attribute `data-uid` to the contextId.
 
 ```html
 <component-one data-uid.attr="contextId"></component-one>
 <component-two data-uid.attr="contextId"></component-two>
 ```
 
-On the connected callback of the components we get the context id and set the internal data id field.
+Both components observe this attribute for change and when it does change performs it's initialization process.  
+In both cases we need to set the `this._dataId` field to context id passed on.
 
 ```js
-async connectedCallback() {
-    this._dataId = Number(this.dataset.uid);
-    await super.connectedCallback();
-}
+this._dataId = Number(this.dataset.uid);
 ```
+
+See the main differences by looking at the function `attributeChangedCallback` in the component's source files.

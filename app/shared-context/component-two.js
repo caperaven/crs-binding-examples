@@ -1,15 +1,15 @@
-class ComponentTwo extends crsbinding.classes.BindableElement {
+class ComponentTwo extends HTMLElement {
     get html() {
         return import.meta.url.replace(".js", ".html");
     }
 
-    get hasOwnContext() {
-        return false;
+    static get observedAttributes() {
+        return ["data-uid"];
     }
 
-    async connectedCallback() {
-        this._dataId = Number(this.dataset.uid);
-        await super.connectedCallback();
+    async attributeChangedCallback() {
+        this.innerHTML = await fetch(this.html).then(result => result.text())
+        crsbinding.parsers.parseElement(this, Number(this.dataset.uid));
     }
 }
 

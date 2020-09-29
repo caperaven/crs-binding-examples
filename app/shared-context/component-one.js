@@ -7,9 +7,13 @@ class ComponentOne extends crsbinding.classes.BindableElement {
         return false;
     }
 
-    async connectedCallback() {
+    static get observedAttributes() {
+        return ["data-uid"];
+    }
+
+    attributeChangedCallback() {
         this._dataId = Number(this.dataset.uid);
-        await super.connectedCallback();
+        this.connectedCallback();
     }
 }
 
