@@ -76,6 +76,11 @@
       "hash": "#tabsheet",
       "view": "tabsheet",
       "hasStyle": true
+    },
+    {
+      "title": "Shared Context",
+      "hash": "#shared-context",
+      "view": "shared-context"
     }
   ]
 }

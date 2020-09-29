@@ -1,0 +1,14 @@
+<h2>${title}</h2>
+
+<p>
+    This example demonstrates how you can share the same binding context between different components. <br/>
+    See the documents link for more details.
+</p>
+
+<label>
+    <div>First Name</div>
+    <input value.bind="firstName" />
+</label>
+
+<component-one data-uid.attr="contextId"></component-one>
+<component-two data-uid.attr="contextId"></component-two>
