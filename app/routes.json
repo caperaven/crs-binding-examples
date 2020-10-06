@@ -43,10 +43,15 @@
       "hasStyle": true
     },
     {
-      "title": "Svg",
+      "title": "SVG",
       "hash": "#svg",
       "view": "svg",
       "hasStyle": true
+    },
+    {
+      "title": "SVG For Each",
+      "hash": "#svg-for",
+      "view": "svg-for"
     },
     {
       "title": "Listen To Property",
