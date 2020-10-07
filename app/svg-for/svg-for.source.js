@@ -10,5 +10,9 @@ export const source = [
     {
         "title": "Repeat UI",
         "url": "https://github.com/caperaven/crs-binding-documentation/blob/master/4.%20repeat-ui.md"
+    },
+    {
+        "title": "SVG documentation",
+        "url": "https://github.com/caperaven/crs-binding-documentation/blob/master/6.%20svg.md"
     }
 ]

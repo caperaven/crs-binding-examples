@@ -54,6 +54,11 @@
       "view": "svg-for"
     },
     {
+      "title": "SVG Animation",
+      "hash": "#svg-animation",
+      "view": "svg-animation"
+    },
+    {
       "title": "Listen To Property",
       "hash": "#listen-on",
       "view": "listen-on"

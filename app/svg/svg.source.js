@@ -18,5 +18,9 @@ export const source = [
     {
         "title": "Data",
         "url": "https://github.com/caperaven/crs-binding-examples/blob/master/components/svg-component/widgets.js"
+    },
+    {
+        "title": "SVG documentation",
+        "url": "https://github.com/caperaven/crs-binding-documentation/blob/master/6.%20svg.md"
     }
 ]
