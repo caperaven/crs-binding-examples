@@ -55,6 +55,18 @@ for (let rect of rectangles) {
 }
 ```
 
+If you look at the svg view model html you will notice the transform binding on the dynamic svg.
+
+```html
+style.transform.one-way="`translate(${rect.x}px, ${rect.y}px)`"
+```
+
+The syntax here is important in that you must define the string literal quotations " ` ".  
+In addition, see the <a target="_blank" href="https://github.com/caperaven/crs-binding-documentation/blob/master/3.%20binding-expressions.md#style-transforms">style transform documentation</a>.
+
+Please note that all transitions are managed through css.   
+Using css combined with svg provides you with a great deal of flexibility on tweening and rendering.
+
 ## Performance
 This example does not have a lot of items.  
 Updating the dat and UI still gives you 60 frames per second.  

@@ -7,16 +7,16 @@
 <h2>${title}</h2>
 
 <h3>Static</h3>
-<svg width="100" height="200" style="background: #dadada" xmlns="http://www.w3.org/2000/svg">
+<svg width="400" height="200" style="background: #dadada" xmlns="http://www.w3.org/2000/svg">
     <template for.once="rect of rectangles">
         <rect x.attr="rect.x" y.attr="rect.y" width.attr="rect.width" height.attr="rect.height" style="fill: blue"></rect>
     </template>
 </svg>
 
 <h3>Dynamic</h3>
-<svg width="100" height="200" style="background: #dadada" xmlns="http://www.w3.org/2000/svg">
+<svg width="400" height="200" style="background: #dadada" xmlns="http://www.w3.org/2000/svg">
     <template for="rect of rectangles">
-        <rect x.attr="rect.x" y.attr="rect.y" width.attr="rect.width" height.attr="rect.height" style.fill.if="rect.width < 60 ? 'red' : 'green'"></rect>
+        <rect width.attr="rect.width" height.attr="rect.height" style.fill.if="rect.width < 60 ? 'red' : 'green'" style.transform.one-way="`translate(${rect.x}px, ${rect.y}px)`"></rect>
     </template>
 </svg>
 

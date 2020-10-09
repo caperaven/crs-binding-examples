@@ -22,7 +22,8 @@ export default class SvgView extends ExamplesViewBase {
 
         this.interval = setInterval(() => {
             for (let rect of rectangles) {
-                rect.width = Math.floor(Math.random() * (100 - 0));
+                rect.width = this._getRandomNumber(0, 100);
+                rect.x = this._getRandomNumber(0, 300);
                 crsbinding.data.updateUI(rect);
             }
         }, 500);
@@ -31,5 +32,9 @@ export default class SvgView extends ExamplesViewBase {
     stop() {
         clearInterval(this.interval);
         delete this.interval;
+    }
+
+    _getRandomNumber(min, max) {
+        return Math.floor(Math.random() * (max - min));
     }
 }
