@@ -8,7 +8,7 @@ export const source = [
         "url": "https://github.com/caperaven/crs-binding-examples/blob/master/app/render-collection/render-collection.js",
     },
     {
-        "title": "Render Collection JS",
+        "title": "Data JS",
         "url": "https://github.com/caperaven/crs-binding-examples/blob/master/app/render-collection/data.js",
     }
 ]
