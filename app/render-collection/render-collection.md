@@ -11,7 +11,7 @@ The aim of this function is to solve timing issues with static renders where you
 Update and render the static UI at any time you want.  
 Unlike the `repeat.once` expression, you can update your static renders when you want to.
 
-Use `repeat.once` when you have control over the data and can have it in time.  
+Use `for.once` when you have control over the data and can have it in time.  
 This is a no javascript way to render your static data once and then forget about it.
 
 Use `renderCollection` when you can't have the data in time, or you want to update the collection later, but it does not happen that often or perhaps at all.
