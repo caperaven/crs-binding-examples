@@ -43,6 +43,12 @@
       "hasStyle": true
     },
     {
+      "title": "Render Static Collection",
+      "hash": "#render-collection",
+      "view": "render-collection",
+      "hasStyle": true
+    },
+    {
       "title": "SVG",
       "hash": "#svg",
       "view": "svg",

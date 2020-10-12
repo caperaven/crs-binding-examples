@@ -1,0 +1,22 @@
+<h2>${title}</h2>
+
+<div role="toolbar">
+    <button click.call="render">Render Collection</button>
+    <button click.call="renderToTarget">Render Collection To Target</button>
+</div>
+
+<section class="inline">
+    <h2>Collection</h2>
+    <ul id="original">
+        <template id="myTemplate">
+            <li>${title}</li>
+        </template>
+    </ul>
+</section>
+
+<section class="inline">
+    <h2>Collection alternative target</h2>
+    <ul id="target">
+    </ul>
+</section>
+
