@@ -14,12 +14,12 @@ section.inline ul {
     border: solid 1px #dadada;
 }
 
-svg {
+.line-chart {
     border: solid 1px #dadada;
     display: block;
 }
 
-path {
+.line-chart path {
     fill: none;
     transition: all 1s cubic-bezier(0.68, 0.28, 0.07, 1.29);
 }
