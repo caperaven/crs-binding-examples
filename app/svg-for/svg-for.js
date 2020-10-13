@@ -1,5 +1,6 @@
 import {ExamplesViewBase} from "../viewBase.js";
 import {createRectangles} from "./data-factory.js";
+import {getRandomNumber} from "./../_utils/utils.js";
 
 export default class SvgView extends ExamplesViewBase {
     get sourceUrl() {
@@ -22,8 +23,8 @@ export default class SvgView extends ExamplesViewBase {
 
         this.interval = setInterval(() => {
             for (let rect of rectangles) {
-                rect.width = this._getRandomNumber(0, 100);
-                rect.x = this._getRandomNumber(0, 300);
+                rect.width = getRandomNumber(0, 100);
+                rect.x = getRandomNumber(0, 300);
                 crsbinding.data.updateUI(rect);
             }
         }, 500);
@@ -32,9 +33,5 @@ export default class SvgView extends ExamplesViewBase {
     stop() {
         clearInterval(this.interval);
         delete this.interval;
-    }
-
-    _getRandomNumber(min, max) {
-        return Math.floor(Math.random() * (max - min));
     }
 }

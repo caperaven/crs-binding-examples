@@ -9,7 +9,17 @@ section.inline h2 {
 
 section.inline ul {
     display: block;
-    height: 32rem;
+    height: 15rem;
     width: 10rem;
     border: solid 1px #dadada;
+}
+
+svg {
+    border: solid 1px #dadada;
+    display: block;
+}
+
+path {
+    fill: none;
+    transition: all 1s cubic-bezier(0.68, 0.28, 0.07, 1.29);
 }
