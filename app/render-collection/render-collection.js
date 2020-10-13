@@ -34,15 +34,15 @@ export default class RenderCollection extends ExamplesViewBase {
     }
 
     show2() {
-        this.updatePaths(2, "ff0090", 0, 300);
+        this.updatePaths(2, "#ff0090", 0, 300);
     }
 
     show5() {
-        this.updatePaths(5, "0098e0", 0, 300);
+        this.updatePaths(5, "#0098e0", 0, 300);
     }
 
     show7() {
-        this.updatePaths(7, "009688", 0, 300);
+        this.updatePaths(7, "#009688", 0, 300);
     }
 
     updatePaths(count, color, min, max) {

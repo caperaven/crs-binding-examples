@@ -25,11 +25,11 @@ export function getPaths(count, pointCount, min, max, color) {
 }
 
 function getRandomPath(count, min, max) {
-    const path = ["M0,300"];
+    const path = ["M 0 300"];
     const offset = 500 / count;
 
     for (let i = 1; i < count; i++) {
-        path.push(`L${i * offset},${getRandomNumber(min, max)}`);
+        path.push(`L ${i * offset} ${getRandomNumber(min, max)}`);
     }
 
     return path.join(" ");
