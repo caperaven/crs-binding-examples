@@ -1,0 +1,38 @@
+.list-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.list-container ul {
+    width: 200px;
+    height: 400px;
+    border: solid 1px #dadada;
+    margin-right: 1rem;
+    padding: 0.5rem;
+    position: relative;
+    list-style: none;
+}
+
+.list-container li {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+#sync-container {
+    margin-right: 1rem;
+}
+
+#lstAvailable:before {
+    content: "Available"
+}
+
+#lstSelected:before {
+    content: "Selected"
+}
+
+#lstSelected:before, #lstAvailable:before {
+    position: absolute;
+    top: -2rem;
+}

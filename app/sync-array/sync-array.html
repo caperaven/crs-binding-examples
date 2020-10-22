@@ -1,1 +1,31 @@
 <h2>${title}</h2>
+
+<div class="list-container">
+    <ul id="lstAvailable">
+        <template for="item of available">
+            <li>
+                <input type="checkbox" checked.bind="item.isSelected" />
+                <input value.bind="item.title"></input>
+            </li>
+        </template>
+    </ul>
+
+    <div id="sync-container">
+        <img width="24" height="24" src="./../../images/sync-black-18dp.svg" hidden.if="syncEnabled != true"></img>
+        <img width="24" height="24" src="./../../images/sync_disabled-black-18dp.svg" hidden.if="syncEnabled == true"></img>
+    </div>
+
+    <ul id="lstSelected">
+        <template for="item of selected">
+            <li>
+                <input value.bind="item.title"></input>
+            </li>
+        </template>
+    </ul>
+</div>
+
+<div role="toolbar">
+    <button click.call="copySelected" disabled.if="syncEnabled == true">Copy over selected</button>
+    <button click.call="enableSync" disabled.if="hasSelected != true">Enable sync</button>
+    <button click.call="disableSync" disabled.if="hasSelected != true">Disable sync</button>
+</div>

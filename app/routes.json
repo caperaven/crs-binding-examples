@@ -96,7 +96,8 @@
     {
       "title": "Sync Arrays",
       "hash": "#sync-array",
-      "view": "sync-array"
+      "view": "sync-array",
+      "hasStyle": true
     }
   ]
 }
