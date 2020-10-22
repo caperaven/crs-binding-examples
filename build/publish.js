@@ -11,6 +11,7 @@ class Publish {
         await instance.copyNodeModules("crs-binding");
         await instance.copyNodeModules("crs-router");
         await instance.cleanCSS("./styles/**/*.css");
+        await instance.copyFiles("./images/*.*", "images");
         await instance.copyFiles("./readme.md");
         await instance.copyFiles("./index.html");
         await instance.copyFiles("./index.js");

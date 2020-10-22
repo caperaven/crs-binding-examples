@@ -20,6 +20,8 @@ There are three actions here.
 1. Add an array to sync group - `addArraySync`
 1. Remove an array sync group - `removeArraySync`
 
+See the array documentation for more details.
+
 Buttons are enabled and disabled based on boolean state variables.  
 Pretty standard stuff, nothing crazy going on here.
 
