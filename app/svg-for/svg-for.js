@@ -16,6 +16,11 @@ export default class SvgView extends ExamplesViewBase {
         super.load();
     }
 
+    async disconnectedCallback() {
+        this.stop();
+        await super.disconnectedCallback();
+    }
+
     update() {
         if (this.interval) return;
 
