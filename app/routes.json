@@ -98,6 +98,11 @@
       "hash": "#sync-array",
       "view": "sync-array",
       "hasStyle": true
+    },
+    {
+      "title": "HTML Fragments",
+      "hash": "#html-fragments",
+      "view": "html-fragments"
     }
   ]
 }
